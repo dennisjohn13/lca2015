@@ -18,4 +18,13 @@ import (
 
 func main() {
 	// Code goes here.
+	// Listen for connection forever.
+	if ln, err := net.Listen("tcp",":8080") ; err == nil {
+		for {
+			// Accept Connection
+			if conn , err := ln.Accept(); err == nil {
+
+			}
+		}
+	}
 }
