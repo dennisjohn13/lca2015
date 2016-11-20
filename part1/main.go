@@ -20,8 +20,9 @@ func main() {
 	// Code goes here.
 	// Listen for connection forever.
 	if ln, err := net.Listen("tcp", ":8080"); err == nil {
+		//Infinite For loop  and accept connection over and over.
 		for {
-			// Accept Connection
+			// Accept Connection from client
 			if conn, err := ln.Accept(); err == nil {
 				reader := bufio.NewReader(conn)
 				if req, err := http.ReadRequest(reader); err == nil {
